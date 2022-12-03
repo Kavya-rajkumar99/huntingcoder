@@ -4,11 +4,11 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top : 1rem;
   align-items: center;
 }
 
@@ -42,19 +42,26 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 1.5rem;
 }
-
+.btn{
+  color : white;
+  background-color: black;
+  padding : 7px 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 9px;
+  font-size: 12px;
+}
 .title,
 .description {
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
+/* .description {
   line-height: 1.5;
   font-size: 1.5rem;
-}
+} */
 
 .code {
   background: #fafafa;
@@ -125,5 +132,43 @@
   }
   .logo img {
     filter: invert(1);
+  }
+}
+
+.mainnav ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.mainnav ul li {
+  margin: 0 24px;
+  list-style: none;
+  font-weight: bold;
+}
+
+.mainnav ul li:hover {
+  cursor: pointer;
+}
+.myImg{
+  margin:20px;
+  width: 133px;
+  border-radius: 50%
+}
+.h2{
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+.h3{
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+.p{
+  margin : 16px 0px;
+  margin-top: 3px;
+}
+@media screen and (max-width: 600px) {
+  .mainnav ul li {
+    margin: 0 10px;
   }
 }
