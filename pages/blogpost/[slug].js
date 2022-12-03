@@ -26,18 +26,26 @@ const BlogItem = (props) => {
 
 export default BlogItem;
 export async function getStaticPaths(){
+  let data = await fs.promises.readdir('blogdata')
+  data = data.map(item => {
+    return {
+      params : {slug : item.split(".")[0]}
+    }
+  })
+  // console.log(data)
   return {
-    paths : [
-      {
-        params : {slug : 'how-to-learn-flask'}
-      },
-      {
-        params : {slug : 'how-to-learn-js'}
-      },
-      {
-        params : {slug : 'how-to-learn-nextjs'}
-      }
-    ],
+    // paths : [
+    //   {
+    //     params : {slug : 'how-to-learn-flask'}
+    //   },
+    //   {
+    //     params : {slug : 'how-to-learn-js'}
+    //   },
+    //   {
+    //     params : {slug : 'how-to-learn-nextjs'}
+    //   }
+    // ],
+    paths : data,
     fallback : true
   }
 }
